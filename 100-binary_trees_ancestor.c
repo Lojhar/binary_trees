@@ -14,6 +14,9 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 	size_t df = 0, ds = 0;
 	if (first == NULL || second == NULL)
 		return (NULL);
+	if (first == second)
+		return ((binary_tree_t *)first);
+	
 	while (tf->parent != NULL)
 	{
 		tf = tf->parent;
